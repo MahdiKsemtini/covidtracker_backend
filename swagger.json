@@ -1,0 +1,159 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Simple API",
+        "description": "A simple API to learn how to write OpenAPI Specification"
+    },
+    "schemes": [
+        "http"
+    ],
+    "host": "localhost:4000",
+    "basePath": "/",
+    "paths": {
+        "/users/": {
+            "get": {
+                "summary": "Gets all users",
+                "description": "Returns a list containing all users.",
+                "responses": {
+                    "200": {
+                        "description": "A list of Person",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "passqr": {
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "createdDate": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/users/{id}": {
+            "get": {
+                "summary": "Gets user by id",
+                "description": "Returns user by id.",
+                "parameters":
+                  {"name": "id",
+                  "in": "path",
+                  "required": true,
+                  "description": "The person's id",
+                  "type": "string"},
+                "responses": {
+                    "200": {
+                        "description": "A list of Person",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "passqr": {
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "createdDate": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/locations/": {
+            "get": {
+                "summary": "Gets all users",
+                "description": "Returns a list containing all locations.",
+                "responses": {
+                    "200": {
+                        "description": "A list of Person",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "categorie": {
+                                        "type": "string"
+                                    },
+                                    "capacity": {
+                                        "type": "string"
+                                    },
+                                    "owner": {
+                                        "type": "string"
+                                    },
+                                    "latitude": {
+                                        "type": "string"
+                                    },
+                                    "longitude": {
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/checkin/": {
+            "get": {
+                "summary": "Get all checkins",
+                "description": "Returns a list containing all checkIn/out.",
+                "responses": {
+                    "200": {
+                        "description": "A list of checkins",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "user": {
+                                        "type": "string"
+                                    },
+                                    "location": {
+                                        "type": "string"
+                                    },
+                                    "checkin": {
+                                        "type": "string"
+                                    },
+                                    "checkout": {
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
