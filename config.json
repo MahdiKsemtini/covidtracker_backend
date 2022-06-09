@@ -1,4 +1,4 @@
 ﻿{
-    "connectionString": "mongodb+srv://mahdiksemtini:12345@cluster0.nhdb0.mongodb.net/covidtracker?retryWrites=true&w=majority",
+    "connectionString": "mongodb+srv://******:******@cluster0.nhdb0.mongodb.net/covidtracker?retryWrites=true&w=majority",
     "secret": "covid"
 }
